@@ -28,4 +28,4 @@ deployment:
   production:
     branch: master
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud app deploy
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet app deploy
