@@ -4,13 +4,14 @@ machine:
   environment:
     CLOUDSDK_CORE_DISABLE_PROMPTS: 1
     CLOUDSDK_CORE_PROJECT: portfolio-167501
+    PATH: $PATH:/opt/google-cloud-sdk/bin
 
 dependencies:
   pre:
     - echo $GCLOUD_SERVICE_KEY | base64 --decode --ignore-garbage > ${HOME}/gcloud-service-key.json
-    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
-    - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
-    - sudo /opt/google-cloud-sdk/bin/gcloud config set project $CLOUDSDK_CORE_PROJECT
+    - sudo gcloud --quiet components update
+    - sudo gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+    - sudo gcloud config set project $CLOUDSDK_CORE_PROJECT
 
 test:
   override:
@@ -28,4 +29,4 @@ deployment:
   production:
     branch: master
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud app deploy
+      - sudo gcloud app deploy
