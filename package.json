@@ -12,6 +12,7 @@
     "node": ">=7.10.0"
   },
   "scripts": {
+    "build": "echo 'success'",
     "deploy": "gcloud app deploy",
     "start": "node app.js",
     "lint": "eslint .",
