@@ -14,7 +14,7 @@
   "scripts": {
     "deploy": "gcloud app deploy",
     "start": "node app.js",
-    "lint": "samples lint",
+    "lint": "eslint .",
     "pretest": "npm run lint",
     "system-test": "samples test app",
     "test": "npm run system-test"
@@ -23,7 +23,12 @@
     "express": "4.15.2"
   },
   "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "1.4.13"
+    "@google-cloud/nodejs-repo-tools": "1.4.13",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0"
   },
   "cloud-repo-tools": {
     "test": {
