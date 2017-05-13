@@ -1,0 +1,25 @@
+machine:
+  node:
+    version: 7.10.0
+
+dependencies:
+  pre:
+    - echo $GCLOUD_SERVICE_KEY | base64 --decode --ignore-garbage > ${HOME}/gcloud-service-key.json
+
+test:
+  override:
+    # - rm -rf $CIRCLE_ARTIFACTS/coverage
+    - npm run lint
+    - npm run test
+    # - cp -r coverage $CIRCLE_ARTIFACTS
+    # - node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info
+
+compile:
+  override:
+    - npm run build
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm run deploy
