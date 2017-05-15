@@ -1,7 +1,6 @@
-import express from 'express';
-import path from 'path';
-
-import api from './api';
+const express = require('express');
+const path = require('path');
+const backend = require('./backend');
 
 const app = express();
 
@@ -10,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/assets', express.static('./build'));
-app.use('/api', api);
+app.use('/api', backend);
 
 // Start the server
 const PORT = process.env.PORT || 8081;
