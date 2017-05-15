@@ -12,31 +12,40 @@
     "node": ">=7.10.0"
   },
   "scripts": {
-    "build": "echo 'success'",
+    "build": "webpack -p --progress",
     "deploy": "gcloud app deploy",
-    "start": "node app.js",
+    "start": "babel-node --presets es2015 app.js",
+    "dev": "webpack-dev-server --devtool source-map --inline --hot",
     "lint": "eslint .",
     "test": "jest"
   },
   "dependencies": {
-    "express": "4.15.2"
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "express": "4.15.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.4.13",
+    "babel-loader": "^6.2.5",
+    "babel-eslint": "^7.2.1",
     "babel-jest": "^20.0.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-3": "^6.17.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
-    "jest": "^20.0.1"
+    "jest": "^20.0.1",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "cloud-repo-tools": {
-    "test": {
-      "app": {
-        "msg": "Hello, world!"
-      }
-    },
     "requiresKeyFile": true,
     "requiresProjectId": true
   }

@@ -1,13 +1,6 @@
-# logs
 logs
 *.log
 npm-debug.log*
-
-# test coverage
 coverage
-
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-# Dependency directories
-node_modules
+node_modules/
+build/
