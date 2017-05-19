@@ -23,7 +23,7 @@ test:
 compile:
   override:
     - npm run build
-    - git submodule update --init && cd blog && npm install && npm run build && cd ../
+    - git submodule update --remote && cd blog && npm install && npm run build && npm prune && cd ../
 
 deployment:
   production:
