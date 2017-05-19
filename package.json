@@ -15,6 +15,7 @@
     "build": "webpack -p --progress",
     "deploy": "gcloud app deploy",
     "start": "node app.js",
+    "start-server": "NODE_ENV=production PORT=80 forever start ./app.js",
     "dev-frontend": "webpack-dev-server --devtool source-map --inline --hot",
     "dev-backend": "nodemon app.js --watch backend",
     "lint": "eslint .",
