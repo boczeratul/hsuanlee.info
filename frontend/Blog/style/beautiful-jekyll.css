@@ -5,7 +5,9 @@
 body {
   color: #404040;
   position: relative;
-  background: #FFF;
+  background: url('/images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 p {
   line-height: 1.5;
