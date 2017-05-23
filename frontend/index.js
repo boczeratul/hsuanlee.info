@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import BlogApp from './blog';
+import BlogApp from './Blog';
 
 const Root = () => <div>歡迎來到漢堡王！</div>;
 

@@ -4,6 +4,7 @@ const backend = require('./backend');
 
 const app = express();
 
+app.use('/images', express.static('./static/images'));
 app.use('/assets', express.static('./build'));
 app.use('/api', backend);
 

@@ -1,0 +1,18 @@
+body {
+  font-family: 'jf-jinxuan', 'Lora', 'Times New Roman', serif;
+  font-size: 18px;
+}
+.jf-loading body {
+    opacity: 0;
+    visibility: hidden;
+}
+.jf-active *, .jf-inactive * {
+    opacity: 1;
+    visibility: visible;
+}
+.jf-active *, .jf-inactive * {
+    -webkit-transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    transition: opacity .5s ease-out;
+}

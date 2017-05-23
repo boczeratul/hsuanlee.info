@@ -45,5 +45,10 @@ module.exports = {
     new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
     new UglifyJSPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Tether: 'tether',
+    }),
   ],
 };
