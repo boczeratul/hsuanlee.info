@@ -9,7 +9,7 @@ module.exports = {
     contentBase: './static',
     inline: true,
     proxy: {
-      '/api': {
+      '!/assets/**': {
         target: 'http://localhost:8081/',
       },
     },
