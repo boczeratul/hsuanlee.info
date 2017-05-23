@@ -29,21 +29,15 @@ class Header extends React.Component {
   }
 
   render() {
-    const navClass = `navbar navbar-light fixed-top navbar-toggleable-md mb-4 ${this.state.scroll > 50 ? 'top-nav-short' : ''}`;
+    const navClass = `navbar navbar-light fixed-top navbar-toggleable mb-4 ${this.state.scroll > 50 ? 'top-nav-short' : ''}`;
 
     return (
       <nav className={navClass}>
-        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-navbar">
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="container">
-          <div className="navbar-header">
-            <Link className="navbar-brand" to="/blog">Hsuan Lee</Link>
-          </div>
-          <div className="collapse navbar-collapse justify-content-end" id="main-navbar">
+        <div className="navbar-container">
+          <Link className="navbar-brand" to="/blog">Hsuan Lee</Link>
+          <div className="collapse navbar-collapse justify-content-end">
             <ul className="nav navbar-nav">
-              <li className="nav-item"><a href="https://github.com/boczeratul/blog.hsuanlee.info">GitHub</a></li>
-              <li className="nav-item"><Link to="/">About</Link></li>
+              <li className="nav-item nav-link"><Link to="/">About</Link></li>
             </ul>
           </div>
         </div>
