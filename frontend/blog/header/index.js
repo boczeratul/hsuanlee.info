@@ -50,7 +50,7 @@ class Header extends React.Component {
         <div className="avatar-container">
           <div className="avatar-img-border">
             <Link to="/blog">
-              <img className="avatar-img" src="./images/hsuan.jpg" />
+              <img className="avatar-img" src="/images/hsuan.jpg" />
             </Link>
           </div>
         </div>
