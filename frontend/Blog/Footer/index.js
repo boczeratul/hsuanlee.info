@@ -21,7 +21,6 @@ class Footer extends React.Component {
                 <li><a href="https://www.linkedin.com/in/boczeratul/" title="LinkedIn"><span className="fa-stack fa-lg"><i className="fa fa-circle fa-stack-2x" /><i className="fa fa-stack-1x fa-inverse fa-linkedin" /></span></a></li>
               </ul>
               <p className="copyright text-muted">© Hsuan Lee • 2017 • <a href="mailto:boczeratul@gmail.com">boczeratul@gmail.com</a></p>
-              <p className="theme-by text-muted">Theme ported from <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a></p>
             </div>
           </div>
         </div>
